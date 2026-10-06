@@ -39,19 +39,57 @@
 
     <script>
         // BANCO TOTAL DE 50 PREGUNTAS
-        // (Aquí puedes colocar las 50 preguntas completas del docente)
         const bancoPreguntas = [
             { pregunta: "¿Cuál es la capital de Bolivia?", opciones: ["La Paz y Sucre", "Santa Cruz", "Cochabamba", "Tarija"], correcta: 0 },
             { pregunta: "¿Qué lenguaje se usa principalmente para estilizar páginas web?", opciones: ["Python", "HTML", "CSS", "SQL"], correcta: 2 },
-            { pregunta: "¿Cuál es el resultado de 5 + 3 * 2 en programación/matemáticas?", opciones: ["16", "11", "10", "13"], correcta: 1 },
+            { pregunta: "¿Cuál es el resultado de 5 + 3 * 2?", opciones: ["16", "11", "10", "13"], correcta: 1 },
             { pregunta: "¿Qué etiqueta HTML se usa para crear un enlace?", opciones: ["<link>", "<a>", "<href>", "<url>"], correcta: 1 },
-            { pregunta: "¿Qué sistema gestor de bases de datos es relacional y de código abierto muy popular?", opciones: ["MongoDB", "PostgreSQL", "Redis", "Firebase"], correcta: 1 },
+            { pregunta: "¿Qué sistema gestor de bases de datos es relacional?", opciones: ["MongoDB", "PostgreSQL", "Redis", "Firebase"], correcta: 1 },
             { pregunta: "¿Cuál de los siguientes es un lenguaje de programación backend?", opciones: ["CSS", "Python", "HTML", "Tailwind"], correcta: 1 },
             { pregunta: "¿Qué significa la sigla CSS?", opciones: ["Cascading Style Sheets", "Creative Style System", "Computer Styled Sheets", "Cascading Simple Syntax"], correcta: 0 },
-            { pregunta: "¿Cuál es el puerto por defecto de un servidor HTTP local de desarrollo en Django?", opciones: ["80", "3000", "8000", "5432"], correcta: 2 },
-            { pregunta: "¿Qué estructura de datos almacena elementos en orden LIFO (Last In, First Out)?", opciones: ["Cola (Queue)", "Pila (Stack)", "Árbol", "Grafo"], correcta: 1 },
-            { pregunta: "¿Qué comando de Git se usa para enviar cambios a un repositorio remoto?", opciones: ["git pull", "git commit", "git push", "git clone"], correcta: 2 },
-            // Puedes seguir agregando más preguntas hasta completar las 50 siguiendo la misma estructura...
+            { pregunta: "¿Cuál es el puerto por defecto de desarrollo en Django?", opciones: ["80", "3000", "8000", "5432"], correcta: 2 },
+            { pregunta: "¿Qué estructura de datos almacena elementos en orden LIFO?", opciones: ["Cola (Queue)", "Pila (Stack)", "Árbol", "Grafo"], correcta: 1 },
+            { pregunta: "¿Qué comando de Git se usa para enviar cambios remotos?", opciones: ["git pull", "git commit", "git push", "git clone"], correcta: 2 },
+            { pregunta: "¿En qué año se fundó Bolivia?", opciones: ["1825", "1810", "1830", "1899"], correcta: 0 },
+            { pregunta: "¿Cuál es el río más largo del mundo?", opciones: ["Nilo", "Amazonas", "Misisipi", "Yangtsé"], correcta: 1 },
+            { pregunta: "¿Quién escribió 'Don Quijote de la Mancha'?", opciones: ["Lope de Vega", "Miguel de Cervantes", "Pablo Neruda", "Gabriel García Márquez"], correcta: 1 },
+            { pregunta: "¿Cuál es el elemento químico cuyo símbolo es O?", opciones: ["Oro", "Osmio", "Oxígeno", "Oculto"], correcta: 2 },
+            { pregunta: "¿Cuántos bits conforman un byte?", opciones: ["4", "8", "16", "32"], correcta: 1 },
+            { pregunta: "¿Qué planeta es conocido como el planeta rojo?", opciones: ["Venus", "Júpiter", "Marte", "Saturno"], correcta: 2 },
+            { pregunta: "¿Cuál es la moneda oficial de Japón?", opciones: ["Yuan", "Dólar", "Yen", "Won"], correcta: 2 },
+            { pregunta: "¿Qué significa la sigla HTML?", opciones: ["HyperText Markup Language", "High Tech Multi Language", "Hyper Transfer Main Loop", "Home Tool Markup Language"], correcta: 0 },
+            { pregunta: "¿Cuál es el resultado de 8 / 2 (2 + 2)?", opciones: ["1", "16", "8", "4"], correcta: 1 },
+            { pregunta: "¿Qué dispositivo se considera el cerebro de la computadora?", opciones: ["Memoria RAM", "Disco Duro", "CPU", "Tarjeta Gráfica"], correcta: 2 },
+            { pregunta: "¿Cuál es el país más grande del mundo?", opciones: ["China", "Canadá", "Estados Unidos", "Rusia"], correcta: 3 },
+            { pregunta: "¿En qué continente se encuentra Egipto?", opciones: ["Asia", "África", "Europa", "Oceanía"], correcta: 1 },
+            { pregunta: "¿Qué gas abunda más en la atmósfera terrestre?", opciones: ["Oxígeno", "Dióxido de Carbono", "Nitrógeno", "Hidrógeno"], correcta: 2 },
+            { pregunta: "¿Cuál es la velocidad de la luz en el vacío (aprox.)?", opciones: ["300,000 km/s", "150,000 km/s", "1,080 km/s", "3,000 km/s"], correcta: 0 },
+            { pregunta: "¿Qué estructura de datos opera bajo el principio FIFO (First In, First Out)?", opciones: ["Pila", "Cola", "Árbol Binario", "Tabla Hash"], correcta: 1 },
+            { pregunta: "¿Quién formuló la teoría de la relatividad?", opciones: ["Isaac Newton", "Albert Einstein", "Nikola Tesla", "Galileo Galilei"], correcta: 1 },
+            { pregunta: "¿Cuál es el océano más grande del mundo?", opciones: ["Atlántico", "Índico", "Ártico", "Pacífico"], correcta: 3 },
+            { pregunta: "¿Qué significa SQL?", opciones: ["Structured Query Language", "Simple Question Language", "System Quality Link", "Server Query Logic"], correcta: 0 },
+            { pregunta: "¿Cuál es el hueso más largo del cuerpo humano?", opciones: ["Húmero", "Fémur", "Tibia", "Radio"], correcta: 1 },
+            { pregunta: "¿Qué comando se usa en Linux para listar archivos de un directorio?", opciones: ["dir", "list", "ls", "show"], correcta: 2 },
+            { pregunta: "¿Cuál es la capital de Argentina?", opciones: ["Rosario", "Córdoba", "Buenos Aires", "Mendoza"], correcta: 2 },
+            { pregunta: "¿Qué tipo de software es un sistema operativo?", opciones: ["Software de aplicación", "Software de sistema", "Hardware lógico", "Firmware de red"], correcta: 1 },
+            { pregunta: "¿Cuántos lados tiene un hexágono?", opciones: ["5", "6", "7", "8"], correcta: 1 },
+            { pregunta: "¿Qué puerto usa por defecto el protocolo seguro HTTPS?", opciones: ["80", "8080", "443", "21"], correcta: 2 },
+            { pregunta: "¿Cuál es el metal más caro del mundo actualmente?", opciones: ["Oro", "Platino", "Rodio", "Plata"], correcta: 2 },
+            { pregunta: "¿En qué año llegó el hombre a la Luna?", opciones: ["1965", "1969", "1972", "1981"], correcta: 1 },
+            { pregunta: "¿Qué significa la sigla URL?", opciones: ["Uniform Resource Locator", "Universal Record Link", "Unified Retrieval Line", "User Registered Login"], correcta: 0 },
+            { pregunta: "¿Cuál es la montaña más alta del mundo?", opciones: ["K2", "Everest", "Aconcagua", "Kilimanjaro"], correcta: 1 },
+            { pregunta: "¿Qué protocolo se usa para enviar correos electrónicos?", opciones: ["HTTP", "FTP", "SMTP", "SSH"], correcta: 2 },
+            { pregunta: "¿Cuál es el resultado de 9 al cuadrado ($9^2$)?", opciones: ["18", "81", "72", "90"], correcta: 1 },
+            { pregunta: "¿Qué empresa desarrolló el sistema operativo Android?", opciones: ["Apple", "Microsoft", "Google", "IBM"], correcta: 2 },
+            { pregunta: "¿Cuál es el idioma más hablado del mundo por número de nativos?", opciones: ["Inglés", "Español", "Chino mandarín", "Hindi"], correcta: 2 },
+            { pregunta: "¿Qué elemento químico tiene el símbolo Fe?", opciones: ["Flúor", "Hierro", "Fósforo", "Francio"], correcta: 1 },
+            { pregunta: "¿Cuál es el órgano más grande del cuerpo humano?", opciones: ["El hígado", "El corazón", "El cerebro", "La piel"], correcta: 3 },
+            { pregunta: "¿Qué significa la palabra 'API' en software?", opciones: ["Application Programming Interface", "Advanced Program Integration", "Automated Process Input", "Application Protocol Interaction"], correcta: 0 },
+            { pregunta: "¿Cuál es la capital de Francia?", opciones: ["Lyon", "Marsella", "París", "Niza"], correcta: 2 },
+            { pregunta: "¿Qué significa RAM en informática?", opciones: ["Readily Accessible Memory", "Random Access Memory", "Run Active Module", "Rapid Allocation Machine"], correcta: 1 },
+            { pregunta: "¿Cuántos grados suman los ángulos internos de un triángulo?", opciones: ["90°", "180°", "360°", "270°"], correcta: 1 },
+            { pregunta: "¿Cuál es el animal terrestre más rápido del mundo?", opciones: ["León", "Guepardo", "Antílope", "Caballo"], correcta: 1 },
+            { pregunta: "¿Qué comando de Git crea una copia local de un repositorio remoto?", opciones: ["git clone", "git init", "git fetch", "git pull"], correcta: 0 }
         ];
 
         let examenActual = [];
@@ -62,12 +100,8 @@
         let respondido = false;
 
         function iniciarQuiz() {
-            // 1. Mezclar todo el banco global aleatoriamente
             let bancoMeclado = [...bancoPreguntas].sort(() => Math.random() - 0.5);
-            
-            // 2. Extraer exactamente 10 preguntas aleatorias para este estudiante
             examenActual = bancoMeclado.slice(0, 10);
-            
             indiceActual = 0;
             puntaje = 0;
             
@@ -96,7 +130,6 @@
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
 
-            // Mezclar también las opciones de cada pregunta para que cambien de posición
             const opcionesConIndice = q.opciones.map((op, i) => ({ texto: op, esOriginal: i === q.correcta }));
             opcionesConIndice.sort(() => Math.random() - 0.5);
 
@@ -127,14 +160,11 @@
             if (respondido) return;
             respondido = true;
 
-            // Si se acaba el tiempo, marca por defecto la respuesta como incorrecta 
-            // y muestra cuál era la correcta antes de pasar a la siguiente
             const botones = document.getElementById('options-container').children;
             Array.from(botones).forEach((btn) => {
                 btn.disabled = true;
             });
 
-            // Dar un pequeño aviso visual o pasar de largo tras 1 segundo
             setTimeout(() => {
                 indiceActual++;
                 cargarPregunta();
@@ -148,7 +178,6 @@
 
             const botones = document.getElementById('options-container').children;
 
-            // Deshabilitar todos y pintar la respuesta correcta
             Array.from(botones).forEach((btn, idx) => {
                 btn.disabled = true;
                 if (todasLasOpciones[idx] && todasLasOpciones[idx].esOriginal) {
@@ -167,7 +196,6 @@
                 }
             }
 
-            // Pasar a la siguiente pregunta tras 1.5 segundos
             setTimeout(() => {
                 indiceActual++;
                 cargarPregunta();
@@ -183,7 +211,6 @@
             document.getElementById('score-text').innerHTML = `Tu calificación: <span class="text-blue-600 font-extrabold">${puntaje} / ${examenActual.length}</span> (${notaFinal.toFixed(0)}%)`;
         }
 
-        // Arrancar examen al cargar la página
         iniciarQuiz();
     </script>
 </body>
